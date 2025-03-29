@@ -58,41 +58,6 @@ Examples
 python xmlrpc_buster.py --url https://example.com
 Checks if xmlrpc.php is enabled.
 
-Prints basic info if discovered.
-
-Brute-force Credentials
-
-python xmlrpc_buster.py \
-    --url https://example.com \
-    --bruteforce \
-    --userlist users.txt \
-    --passlist passwords.txt \
-    --output valid_creds.txt
-Checks and attempts multiple user/password combos via XML-RPC multicall.
-
-Outputs valid credentials into valid_creds.txt.
-
-Smart Mode on a List of Targets
-
-python xmlrpc_buster.py \
-    --targets targets.txt \
-    --smart-mode \
-    --enum-plugins \
-    --enum-themes \
-    --threads 10
-Runs detection, version check, SSRF pingback, plugin/theme enumeration, and brute-forcing (if user/pass lists exist or can be auto-filled).
-
-Uses 10 threads for faster processing.
-
-Google Dork + SSRF Scan
-
-python xmlrpc_buster.py \
-    --dork 'inurl:"/xmlrpc.php" + "WordPress" -github' \
-    --dork-limit 5 \
-    --pingback \
-    --ssrf-scan local_hosts.txt
-Finds up to 5 potential targets with Google Dorking.
-
 
 Legal Disclaimer
 This project is made available by the authors for educational, ethical penetration testing and security research purposes only. You are solely responsible for obeying all applicable laws. Unauthorized attempts to gain access to a computer system are illegal and unethical. The maintainers and contributors to this project disclaim all responsibility for how you choose to use it.
