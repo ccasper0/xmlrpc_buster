@@ -36,28 +36,7 @@ python xmlrpc_buster.py --targets targets.txt
  Run a Google Dork
 python xmlrpc_buster.py --dork 'inurl:"xmlrpc.php" ext:php' --dork-limit 20
 Flags & Arguments
-Flag / Argument	Description
--u, --url	Single target URL (e.g., https://site.com)
--t, --targets	File with a list of target URLs (one per line)
---pingback	Test for SSRF using the pingback.ping XML-RPC method
---bruteforce	Enable XML-RPC multicall brute-forcing of credentials
---userlist	Username wordlist file (auto-fills from common paths if missing)
---passlist	Password wordlist file (auto-fills from ~/rockyou.txt if found)
---threads	Number of concurrent threads (default: 5)
--o, --output	Output file to store valid credentials
---dork	Perform a Google Dork search (optionally specify a custom query)
---dork-limit	Limit number of dork results (default: 10)
---ssrf-target	Custom URL/IP for SSRF via pingback.ping
---ssrf-scan	File with URLs/IPs to test SSRF in a loop
---scan-public	Scan for public data like readme, possible usernames, etc.
---detect-version	Attempt to detect WP version (via meta or readme.html)
---enum-plugins	Enumerate common plugins
---enum-themes	Enumerate common themes
---smart-mode	Run an “all-in-one” routine (recon, version, SSRF, bruteforce…)
-Examples
-python xmlrpc_buster.py --url https://example.com
-Checks if xmlrpc.php is enabled.
-
+--help
 
 Legal Disclaimer
 This project is made available by the authors for educational, ethical penetration testing and security research purposes only. You are solely responsible for obeying all applicable laws. Unauthorized attempts to gain access to a computer system are illegal and unethical. The maintainers and contributors to this project disclaim all responsibility for how you choose to use it.
